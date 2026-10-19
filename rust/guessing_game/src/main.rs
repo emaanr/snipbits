@@ -18,10 +18,18 @@ fn main() {
         io::stdin()
             .read_line(&mut guess)
             .expect("Failed to read line");
-        
+
+        if guess.trim() == "quit" {
+            println!("Game over!");
+            break;
+        }
+
         let guess: u32 = match guess.trim().parse() {
             Ok(num) => num,
-            Err(_) => continue
+            Err(_) => {
+                println!("Please enter a number or \"quit\"");
+                continue;
+            }
         };
     
         println!("You guessed: {guess}");
