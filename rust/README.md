@@ -1,3 +1,3 @@
 # Rust
 
-Trying to learn Rust.
+Trying to understand Rust.
